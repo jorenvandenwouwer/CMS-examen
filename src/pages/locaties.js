@@ -30,7 +30,9 @@ const Locaties = () => {
                               }
                             }
                         }
-                        
+                        type {
+                          name
+                        }
                       }
                       slug
                     }
@@ -40,7 +42,7 @@ const Locaties = () => {
         }
     `)
 
-        console.log(locaties.edges)
+    console.log(locaties.edges)
     return <Layout>
     <SEO title="Locaties"/>
     <Wrapper>

@@ -16,25 +16,31 @@ export const Wrapper = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    image {
+        max-width:100%;
+      }
+      h1{
+        position: absolute;
+        top: 60%;
 
+        font-family: ${FONT_FAMILIES.TITLE};
+      font-size: 3rem;
+      color: black;
+      text-transform: uppercase;
+      }
     
 
     .inner-div {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      
       transform: translate(-50%, -50%);
       width: 60%;
-      padding: 1rem;
+      
       background-color: ${COLORS.PRIMARY + "d0"};
-
-      @media (max-width: ${MEDIA_QUERIES.LARGE}) {
-        top: 120px;
-        margin-top: 30px;
-        width: 90%;
-      }
+      
+      
 
       p {
         color: white;

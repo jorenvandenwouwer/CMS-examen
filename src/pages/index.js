@@ -10,7 +10,7 @@ const IndexPage = () => {
     wpcontent: {
       page: {
         homeMeta: {
-          homepageTitle,
+          homepagetitle,
           homepagefeaturedlocations,
           bannerfoto
         }
@@ -58,13 +58,14 @@ const IndexPage = () => {
       }
     }
   `)
+  console.log(homepagetitle)
   return <Layout>
     <SEO title="Home" />
     <Wrapper >
     <div className="banner">
       <Image fluid={bannerfoto.imageFile.childImageSharp.fluid}
       alt={bannerfoto.altText} />
-      <h1>{homepageTitle}</h1>
+      <h1>{homepagetitle}</h1>
     </div>
     <div className="locaties">
     <h1>Uitgelichte locaties</h1>

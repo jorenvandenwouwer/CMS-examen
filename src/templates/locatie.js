@@ -15,7 +15,9 @@ const locationPage = ({data}) => {
             <div className="locatie-detail">
                 
                 <Image fluid={locatie.foto.imageFile.childImageSharp.fluid} alt={locatie.foto.altText}/>
-                <p>{locatie.straat} {locatie.huisnummer}<br/>Beveren 9120</p>
+                <p><b>Adres : <br/><br/> Type : </b></p>
+                <p>{locatie.straat} {locatie.huisnummer}<br/>Beveren 9120 <br/>{locatie.type.name}</p>
+                
                 
             </div>
             <p>{locatie.beschrijving}</p>
@@ -48,6 +50,10 @@ query($id: ID!){
                                 }
                             }
                         }
+                    }
+                    
+                    type {
+                        name
                     }
             }
         }
